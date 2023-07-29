@@ -1,0 +1,9 @@
+{
+"type": "mysql",
+"host": "rm-bp1lq893me7u6wrl9jo.mysql.rds.aliyuncs.com",
+"root": "fuying_read",
+"pwd": "Fuying2021",
+"name": "fuying",
+"ports": ":8888",
+"port": "3306"
+}

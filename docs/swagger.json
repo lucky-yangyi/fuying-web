@@ -1,0 +1,1156 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/api/banner": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "首页banner",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.JmBanner"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/category/index": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "精选素养课",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "类型",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "页码",
+                        "name": "pageNo",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "每页大小",
+                        "name": "pageSize",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.CategoryList"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/category/list": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "精选素养课分类列表",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.JmProductCategory"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/code": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "官网二维码",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "id = 76 官网企微二维码 id = 77 官网公众号二维码 ",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.CodeList"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/count": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "我们一起看到教育的力量",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.UserCount"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/course/catalogue": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "课程目录",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "课程id ",
+                        "name": "pid",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.CourseCatalogueList"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/course/detail": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "课程详情",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "课程id ",
+                        "name": "pid",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.CourseDetailList"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/index": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "扶鹰成长故事",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "类型 1:家长故事 2：孩子的故事 3：扶小鹰成长故事 4：公司新闻 5：行业新闻 6：亲子教育 ",
+                        "name": "type",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "页码",
+                        "name": "pageNo",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "每页大小",
+                        "name": "pageSize",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.JmWebsiteNews"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/index/two": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "扶小鹰2",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.JmWebsiteNews"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/live": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "大咖直播 免费观看",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.JmLive"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/member": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "王金海会员课 随时畅听",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.MemberList"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/member/list": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "李玫瑾等大咖课 无忧畅听",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.MemberClassList"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/message": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "留言",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "课程id ",
+                        "name": "pid",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.MessageList"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/parent": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "课后家长感悟",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.JmParentPerception"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/parent/course": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "智慧父母成长课程",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.ParentInfo"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/product": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "其他火爆课程 一键免费领",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.ProductList"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/teenager/course": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "青少年精英培养课程",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.CourseInfo"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        },
+        "/api/train/camp": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "训练营",
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/model.ParentInfo"
+                        }
+                    },
+                    "400": {
+                        "description": "入参错误"
+                    },
+                    "500": {
+                        "description": "内部错误"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "model.CategoryList": {
+            "type": "object",
+            "properties": {
+                "current": {
+                    "description": "页码",
+                    "type": "integer"
+                },
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/model.Categorys"
+                    }
+                },
+                "pageSize": {
+                    "description": "每页大小",
+                    "type": "integer"
+                },
+                "totalCount": {
+                    "description": "总数",
+                    "type": "integer"
+                }
+            }
+        },
+        "model.Categorys": {
+            "type": "object",
+            "properties": {
+                "costPrice": {
+                    "description": "成本价",
+                    "type": "number"
+                },
+                "descp": {
+                    "description": "描述",
+                    "type": "string"
+                },
+                "headUrl": {
+                    "description": "照片",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "课程id",
+                    "type": "integer"
+                },
+                "imagePath": {
+                    "description": "头图",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "姓名",
+                    "type": "string"
+                },
+                "sellPrice": {
+                    "description": "销售价",
+                    "type": "number"
+                },
+                "subscribers": {
+                    "description": "订阅人数",
+                    "type": "integer"
+                },
+                "title": {
+                    "description": "课程名",
+                    "type": "string"
+                }
+            }
+        },
+        "model.CodeList": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "description": "内容",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "id",
+                    "type": "integer"
+                },
+                "title": {
+                    "description": "标题",
+                    "type": "string"
+                }
+            }
+        },
+        "model.CourseCatalogueList": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "章节id",
+                    "type": "integer"
+                },
+                "sourceTotalSecond": {
+                    "description": "时长",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "标题",
+                    "type": "string"
+                }
+            }
+        },
+        "model.CourseDetailList": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "description": "课程url",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "自增长ID",
+                    "type": "integer"
+                },
+                "type": {
+                    "description": "课程/专栏分类（1课程 2专栏 3组合产品 20扶小鹰课程",
+                    "type": "integer"
+                }
+            }
+        },
+        "model.CourseInfo": {
+            "type": "object",
+            "properties": {
+                "costPrice": {
+                    "description": "成本价",
+                    "type": "number"
+                },
+                "descp": {
+                    "description": "描述",
+                    "type": "string"
+                },
+                "headUrl": {
+                    "description": "照片",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "课程id",
+                    "type": "integer"
+                },
+                "imagePath": {
+                    "description": "头图",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "姓名",
+                    "type": "string"
+                },
+                "sellPrice": {
+                    "description": "销售价",
+                    "type": "number"
+                },
+                "title": {
+                    "description": "课程名",
+                    "type": "string"
+                }
+            }
+        },
+        "model.JmBanner": {
+            "type": "object",
+            "properties": {
+                "create_id": {
+                    "type": "integer"
+                },
+                "create_time": {
+                    "description": "创建时间",
+                    "type": "integer"
+                },
+                "end_time": {
+                    "description": "结束时间",
+                    "type": "integer"
+                },
+                "extra": {
+                    "description": "链接",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "ID",
+                    "type": "integer"
+                },
+                "img_url": {
+                    "description": "首屏图片URL",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "名称",
+                    "type": "string"
+                },
+                "open_count": {
+                    "description": "打开次数统计",
+                    "type": "integer"
+                },
+                "open_type": {
+                    "description": "banner链接方式：0:当前页打开，1:新开页打开 2:原生打开",
+                    "type": "integer"
+                },
+                "remark": {
+                    "description": "描述",
+                    "type": "string"
+                },
+                "sort": {
+                    "description": "排序",
+                    "type": "integer"
+                },
+                "start_time": {
+                    "description": "开始时间",
+                    "type": "integer"
+                },
+                "status": {
+                    "description": "状态 0：禁用 -1 删除 1:有效",
+                    "type": "integer"
+                },
+                "type": {
+                    "description": "显示位置（jm_banner_category.id）",
+                    "type": "string"
+                },
+                "update_id": {
+                    "type": "integer"
+                },
+                "update_time": {
+                    "description": "更新时间",
+                    "type": "integer"
+                }
+            }
+        },
+        "model.JmLive": {
+            "type": "object",
+            "properties": {
+                "advert_pic_path": {
+                    "description": "详情页图片",
+                    "type": "string"
+                },
+                "banner_pic_path": {
+                    "description": "详情页banner图片",
+                    "type": "string"
+                },
+                "channel_id": {
+                    "description": "直播间频道id",
+                    "type": "string"
+                },
+                "content": {
+                    "description": "直播详情",
+                    "type": "string"
+                },
+                "create_id": {
+                    "type": "integer"
+                },
+                "create_time": {
+                    "type": "integer"
+                },
+                "has_rank": {
+                    "description": "是否有榜单活动：0否 1是",
+                    "type": "integer"
+                },
+                "has_replay": {
+                    "description": "是否回放：0否 1是",
+                    "type": "integer"
+                },
+                "id": {
+                    "description": "自增长ID",
+                    "type": "integer"
+                },
+                "info": {
+                    "description": "简介",
+                    "type": "string"
+                },
+                "is_show": {
+                    "description": "显示状态：1显示 2隐藏",
+                    "type": "integer"
+                },
+                "live_reply_content": {
+                    "description": "微信直播回复",
+                    "type": "string"
+                },
+                "live_room_path": {
+                    "description": "直播链接",
+                    "type": "string"
+                },
+                "live_status": {
+                    "description": "直播状态，未开始=1，直播中=2，暂停中=3，已结束=4",
+                    "type": "integer"
+                },
+                "live_type": {
+                    "description": "直播类型 1保利直播 2视频号直播",
+                    "type": "integer"
+                },
+                "pic_path": {
+                    "description": "列表页头图",
+                    "type": "string"
+                },
+                "poster_path": {
+                    "description": "宣传海报地址",
+                    "type": "string"
+                },
+                "real_end_time": {
+                    "description": "实际结束时间",
+                    "type": "integer"
+                },
+                "real_start_time": {
+                    "description": "实际开始时间",
+                    "type": "integer"
+                },
+                "replay_offline_time": {
+                    "description": "回放下线时间",
+                    "type": "integer"
+                },
+                "replay_online_time": {
+                    "description": "回放上线时间",
+                    "type": "integer"
+                },
+                "replay_path": {
+                    "description": "回放视频文件地址",
+                    "type": "string"
+                },
+                "reserve_user_base_count": {
+                    "description": "预约人员基数",
+                    "type": "integer"
+                },
+                "secret_key": {
+                    "description": "用于自定义授权的SecretKey",
+                    "type": "string"
+                },
+                "share_content": {
+                    "description": "分享邀请介绍",
+                    "type": "string"
+                },
+                "single_share_id": {
+                    "description": "jm_product_single_share表的id，广告插图和链接信息",
+                    "type": "integer"
+                },
+                "sort": {
+                    "description": "排序（越大越前）",
+                    "type": "integer"
+                },
+                "start_time": {
+                    "description": "计划开始时间",
+                    "type": "integer"
+                },
+                "status": {
+                    "description": "状态（-1：已删除，1：有效）",
+                    "type": "integer"
+                },
+                "teacher": {
+                    "description": "讲师信息",
+                    "type": "string"
+                },
+                "times": {
+                    "description": "计划直播时长  分钟",
+                    "type": "integer"
+                },
+                "title": {
+                    "description": "标题",
+                    "type": "string"
+                },
+                "update_id": {
+                    "type": "integer"
+                },
+                "update_time": {
+                    "type": "integer"
+                },
+                "video_no_url": {
+                    "description": "视频号直播url",
+                    "type": "string"
+                }
+            }
+        },
+        "model.JmParentPerception": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "description": "详情",
+                    "type": "string"
+                },
+                "create_id": {
+                    "description": "创建者",
+                    "type": "integer"
+                },
+                "create_time": {
+                    "description": "创建时间",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "自增长ID",
+                    "type": "integer"
+                },
+                "image_url": {
+                    "description": "图片url",
+                    "type": "string"
+                },
+                "nick_name": {
+                    "description": "标题",
+                    "type": "string"
+                },
+                "publish_time": {
+                    "description": "发布时间",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "状态（-1；删除）",
+                    "type": "integer"
+                },
+                "update_id": {
+                    "description": "修改者",
+                    "type": "integer"
+                },
+                "update_time": {
+                    "description": "修改时间",
+                    "type": "string"
+                }
+            }
+        },
+        "model.JmProductCategory": {
+            "type": "object",
+            "properties": {
+                "create_id": {
+                    "description": "创建者",
+                    "type": "integer"
+                },
+                "create_time": {
+                    "description": "创建时间",
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "is_show": {
+                    "description": "首页是否显示 0 不显示，1显示",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "产品分类名称",
+                    "type": "string"
+                },
+                "old_id": {
+                    "description": "旧系统fy_course_type表的id",
+                    "type": "integer"
+                },
+                "pid": {
+                    "description": "父级id",
+                    "type": "integer"
+                },
+                "sort": {
+                    "description": "排序（越大越靠前）",
+                    "type": "integer"
+                },
+                "status": {
+                    "description": "是否被删除(0:未删除 -1：已删除)",
+                    "type": "integer"
+                },
+                "type": {
+                    "description": "课程/专栏分类（1课程 2专栏）",
+                    "type": "integer"
+                },
+                "update_id": {
+                    "description": "更新者",
+                    "type": "integer"
+                },
+                "update_time": {
+                    "description": "更新时间",
+                    "type": "integer"
+                }
+            }
+        },
+        "model.JmWebsiteNews": {
+            "type": "object",
+            "properties": {
+                "adit": {
+                    "description": "责任编辑",
+                    "type": "string"
+                },
+                "content": {
+                    "description": "详情",
+                    "type": "string"
+                },
+                "create_id": {
+                    "description": "创建者",
+                    "type": "integer"
+                },
+                "create_time": {
+                    "description": "创建时间",
+                    "type": "string"
+                },
+                "desc": {
+                    "description": "描述",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "自增长ID",
+                    "type": "integer"
+                },
+                "image_url": {
+                    "description": "图片url",
+                    "type": "string"
+                },
+                "source": {
+                    "description": "来源",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "状态（-1；删除）",
+                    "type": "integer"
+                },
+                "title": {
+                    "description": "标题",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "（1:家长故事 2：孩子的故事 3：扶小鹰成长故事 4：公司新闻 5：行业新闻 6：亲子教育）",
+                    "type": "integer"
+                },
+                "update_id": {
+                    "description": "修改者",
+                    "type": "integer"
+                },
+                "update_time": {
+                    "description": "修改时间",
+                    "type": "string"
+                },
+                "video_url": {
+                    "description": "视频url",
+                    "type": "string"
+                }
+            }
+        },
+        "model.MemberClassList": {
+            "type": "object",
+            "properties": {
+                "descp": {
+                    "description": "描述",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "课程id",
+                    "type": "integer"
+                },
+                "imagePath": {
+                    "description": "头图",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "课程名",
+                    "type": "string"
+                }
+            }
+        },
+        "model.MemberList": {
+            "type": "object",
+            "properties": {
+                "descp": {
+                    "description": "描述",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "课程id",
+                    "type": "integer"
+                },
+                "imagePath": {
+                    "description": "头图",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "课程名",
+                    "type": "string"
+                }
+            }
+        },
+        "model.MessageList": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "description": "评论内容",
+                    "type": "string"
+                },
+                "createTime": {
+                    "description": "评论时间",
+                    "type": "integer"
+                },
+                "id": {
+                    "description": "评论id",
+                    "type": "integer"
+                },
+                "nickname": {
+                    "description": "昵称",
+                    "type": "string"
+                },
+                "photoUrl": {
+                    "description": "\"头像\"",
+                    "type": "string"
+                }
+            }
+        },
+        "model.ParentInfo": {
+            "type": "object",
+            "properties": {
+                "costPrice": {
+                    "description": "成本价",
+                    "type": "number"
+                },
+                "descp": {
+                    "description": "描述",
+                    "type": "string"
+                },
+                "headUrl": {
+                    "description": "照片",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "课程id",
+                    "type": "integer"
+                },
+                "imagePath": {
+                    "description": "头图",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "姓名",
+                    "type": "string"
+                },
+                "sellPrice": {
+                    "description": "销售价",
+                    "type": "number"
+                },
+                "title": {
+                    "description": "课程名",
+                    "type": "string"
+                }
+            }
+        },
+        "model.ProductList": {
+            "type": "object",
+            "properties": {
+                "cnt": {
+                    "description": "章节数",
+                    "type": "integer"
+                },
+                "descp": {
+                    "description": "描述",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "课程id",
+                    "type": "integer"
+                },
+                "imagePath": {
+                    "description": "头图",
+                    "type": "string"
+                },
+                "subscribers": {
+                    "description": "订阅人数",
+                    "type": "integer"
+                },
+                "title": {
+                    "description": "课程名",
+                    "type": "string"
+                }
+            }
+        },
+        "model.UserCount": {
+            "type": "object",
+            "properties": {
+                "learn_time": {
+                    "description": "学习时长",
+                    "type": "integer"
+                },
+                "service_area": {
+                    "description": "服务地区",
+                    "type": "integer"
+                },
+                "service_num": {
+                    "description": "服务人数",
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}
